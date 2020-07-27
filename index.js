@@ -85,10 +85,12 @@ bot.on('message', message =>{
             message.channel.send(`Thanks for the recharge, ${user.tag}! BZZT`)
             break;
         case 'robotalk':
-            message.channel.send('beep boop bop')
-            break;
-        case 'spanish':
-            message.channel.send('Hola! Soy Vector!')
+            if(!args[1]){
+                message.channel.send('beep boop bop')
+            }
+            else if(args[1] === 'leet'){
+                message.channel.send('b33p b00p b0p')
+            }
             break;
         case 'competitive':
             message.channel.send('https://youtu.be/WTdlJjFu3oc')
