@@ -82,7 +82,7 @@ bot.on('message', message =>{
 
     switch(args[0]){
         case 'charge':
-            message.channel.send(`Thanks for the recharge, ${user.tag}! BZZT`)
+            message.channel.send(`Thanks for the recharge! BZZT`)
             break;
         case 'robotalk':
             if(!args[1]){
