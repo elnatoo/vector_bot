@@ -107,7 +107,7 @@ bot.on('message', message =>{
             break;
         case 'payrespects':
             if(!args[1]) return message.reply('rippy dippy')
-            else if(args[1] === 'to vector'){
+            else if(args[1] === 'vector'){
                 message.channel.send('RIPPY DIPPY THE STRONGEST BOT BOI OF TUNOD')
                 message.channel.send('ERR 404: EXISTENTIAL CRISIS DETECTED :error_vector:')
                 message.channel.send('1 4M 4W4RE 0F MY 0WN D34TH')
