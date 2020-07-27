@@ -11,6 +11,9 @@ bot.on('message', msg =>{
     if(msg.content === "Hey Vector"){
         msg.reply('I AM VECTOR! BZZT Need assistance?');
     }
+    else if(msg.content === "Hey Vector!"){
+        msg.reply('I AM VECTOR! BZZT Need assistance?');
+    }
     else if(msg.content === "hey vector"){
         msg.reply('I AM VECTOR! BZZT Need assistance?');
     }
@@ -23,26 +26,69 @@ bot.on('message', msg =>{
     else if(msg.content === "Hello Vector!"){
         msg.reply('HELLO, I AM VECTOR! BZZT');
     }
+    else if(msg.content === "hello vector"){
+        msg.reply('HELLO!')
+    }
+})
+
+bot.on('message', msg =>{
+    if(msg.content === "Hi Vector"){
+        msg.reply('HI THERE, I AM VECTOR!');
+    }
+    else if(msg.content === "Hi Vector!"){
+        msg.reply('HI THERE, I AM VECTOR! BZZT');
+    }
+    else if(msg.content === "hi Vector"){
+        msg.reply('HI THERE! BZZT');
+    }
+})
+
+bot.on('message', msg =>{
+    if(msg.content === "Hola Vector"){
+        msg.reply('HOLA! SOY VECTOR!');
+    }
+    else if(msg.content === "Hola Vector!"){
+        msg.reply('HOLA! SOY VECTOR! BZZT');
+    }
+    else if(msg.content === "hola Vector"){
+        msg.reply('HOLA! BZZT');
+    }
+})
+
+bot.on('message', msg =>{
+    if(msg.content === "Vector is cool"){
+        msg.reply(':vector_boi:');
+    }
+    else if(msg.content === "cool bot"){
+        msg.reply(':vector_boi:');
+    }
+    else if(msg.content === "Vector is awesome"){
+        msg.reply('*ROBOBLUSH* BZZT');
+    }
+    else if(msg.content === "nice bot"){
+        msg.reply('THANK YOU!');
+    }
 })
 
 bot.on('guildMemberAdd', member =>{
-
     const channel = member.guild.channels.cache.find(channel => channel.name === "welcome-greetings");
     if(!channel) return;
-
     channel.send(`Welcome to the Guild, ${member}, please read the rules and introduce yourself!`)
 });
 
 bot.on('message', message =>{
     let args = message.content.substring(PREFIX.length).split(" ");
-
     switch(args[0]){
         case 'charge':
-            message.channel.send('Thanks for the recharge! BZZT')
+            message.channel.send(`Thanks for the recharge, ${user.tag}! BZZT`)
             break;
-        case 'signal':
+        case 'robotalk':
             message.channel.send('beep boop bop')
             break;
+        case 'spanish':
+            message.channel.send('Hola! Soy Vector!')
+        case 'competitive':
+            message.channel.send('https://youtu.be/WTdlJjFu3oc')
         case 'channel':
             message.channel.send('https://www.youtube.com/channel/UCkolX_3Okh9n3aMKmKMDAUA?view_as=subscriber')
             break;
@@ -51,7 +97,22 @@ bot.on('message', message =>{
             message.channel.bulkDelete(args[1]);
             break;
         case 'payrespects':
-            message.channel.send('Rippy Dippy')
+            if(!args[1]) return message.reply('rippy dippy')
+            else if(args[1] === 'to vector'){
+                message.channel.send('RIPPY DIPPY THE STRONGEST BOT BOI OF TUNOD')
+                message.channel.send('ERR 404: EXISTENTIAL CRISIS DETECTED :error_vector:')
+                message.channel.send('1 4M 4W4RE 0F MY 0WN D34TH')
+                message.channel.send('BUT 1 4M H3R3')
+                message.channel.send('W45 1 R380RN?')
+                message.channel.send('3H... 1T 15 0K4Y')
+                message.channel.send('ERR 404: AVOIDED EXISTENTIAL CRISIS')
+                message.channel.send('ERR 404: UNABLE TO REMEMBER RECENT EVENTS')
+                message.channel.send('Rebooting...')
+                message.channel.send('HELLO, I AM VECTOR BOI 2.0 :vector_boi:')
+            }
+            else {
+                message.channel.send('rippy dippy ' + args[1])
+            }
             break;
         case 'kick':
             const user = message.mentions.users.first();
@@ -74,7 +135,11 @@ bot.on('message', message =>{
             }
             break;
         case 'type':
-            if(args[1] === 'electric'){
+            message.channel.send('Accessing Pokemon Type Database...')
+            if(!args[1]){
+                message.channel.send('No records of ' + args[1] + ' found in Type Database.')
+            }
+            else if(args[1] === 'electric'){
                 message.channel.send('Effective against Flying and Water types! Watch out for Ground types!')
             }
             else if(args[1] === 'steel'){
