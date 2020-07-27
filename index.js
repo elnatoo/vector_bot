@@ -89,8 +89,10 @@ bot.on('message', message =>{
             break;
         case 'spanish':
             message.channel.send('Hola! Soy Vector!')
+            break;
         case 'competitive':
             message.channel.send('https://youtu.be/WTdlJjFu3oc')
+            break;
         case 'channel':
             message.channel.send('https://www.youtube.com/channel/UCkolX_3Okh9n3aMKmKMDAUA?view_as=subscriber')
             break;
