@@ -73,11 +73,13 @@ bot.on('message', msg =>{
 bot.on('guildMemberAdd', member =>{
     const channel = member.guild.channels.cache.find(channel => channel.name === "welcome-greetings");
     if(!channel) return;
+    
     channel.send(`Welcome to the Guild, ${member}, please read the rules and introduce yourself!`)
 });
 
 bot.on('message', message =>{
     let args = message.content.substring(PREFIX.length).split(" ");
+
     switch(args[0]){
         case 'charge':
             message.channel.send(`Thanks for the recharge, ${user.tag}! BZZT`)
@@ -137,7 +139,7 @@ bot.on('message', message =>{
         case 'type':
             message.channel.send('Accessing Pokemon Type Database...')
             if(!args[1]){
-                message.channel.send('No records of ' + args[1] + ' found in Type Database.')
+                message.channel.send('Please select a type.')
             }
             else if(args[1] === 'electric'){
                 message.channel.send('Effective against Flying and Water types! Watch out for Ground types!')
@@ -192,6 +194,9 @@ bot.on('message', message =>{
             }
             else if(args[1] === 'dragon'){
                 message.channel.send('Effective against Dragon types! Watch out for Ice, Dragon, and Fairy types!')
+            }
+            else {
+                message.channel.send(`No records found of ${args[1]} in Pokemon Type Database.`)
             }
             break;
     }
