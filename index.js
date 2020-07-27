@@ -91,6 +91,9 @@ bot.on('message', message =>{
             else if(args[1] === 'leet'){
                 message.channel.send('b33p b00p b0p')
             }
+            else {
+                message.channel.send('BEEP BEEP')
+            }
             break;
         case 'competitive':
             message.channel.send('https://youtu.be/WTdlJjFu3oc')
