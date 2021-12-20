@@ -55,6 +55,21 @@ bot.on('message', msg =>{
 })
 
 bot.on('message', msg =>{
+    if(msg.content === "Howdy Vector"){
+        msg.reply('HOWDY, I AM VECTOR!');
+    }
+    else if(msg.content === "Howdy Vector!"){
+        msg.reply('HOWDY, I AM VECTOR! BZZT');
+    }
+    else if(msg.content === "howdy Vector"){
+        msg.reply('HOWDY!')
+    }
+    else if(msg.content === "howdy vector"){
+        msg.reply('HOWDY!')
+    }
+})
+
+bot.on('message', msg =>{
     if(msg.content === "Hola Vector"){
         msg.reply('HOLA! SOY VECTOR!');
     }
@@ -132,6 +147,18 @@ bot.on('guildMemberAdd', member =>{
 
     channel.send(`Welcome to the Guild, ${member}, please read the rules and introduce yourself in #sentry-post!`)
 });
+
+// Message Reactions
+
+bot.on('message', message =>{
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    switch(args[0]){
+        case 'pkpog':
+            message.react('<:pokePOGGERS:834265725253976076>').then(message.channel.send('PokePOGGERS!'));
+        break;
+    }
+})
 
 // Commands
 
