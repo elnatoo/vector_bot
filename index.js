@@ -94,6 +94,9 @@ bot.on('message', msg =>{
     else if(msg.content === "cool bot"){
         msg.reply('The best there is! B)');
     }
+    else if(msg.content === "Cool bot"){
+        msg.reply('The best there is! B)');
+    }
     else if(msg.content === "Vector is awesome"){
         msg.reply('*roboblush* ~BZZT~');
     }
@@ -103,8 +106,17 @@ bot.on('message', msg =>{
     else if(msg.content === "nice bot"){
         msg.reply('THANK YOU! :)');
     }
+    else if(msg.content === "Nice bot"){
+        msg.reply('THANK YOU! :)');
+    }
     else if(msg.content === "good bot"){
         msg.reply(':D');
+    }
+    else if(msg.content === "Good bot"){
+        msg.reply(':D');
+    }
+    else if(msg.content === "I love piplup"){
+        msg.reply('cap');
     }
 })
 
@@ -131,10 +143,49 @@ bot.on('message', msg =>{
         msg.reply('cringe');
     }
     else if(msg.content === "infernape sucks"){
-        msg.reply('cringe');
+        msg.reply('cap');
+    }
+    else if(msg.content === "infernape is garbage"){
+        msg.reply('cap');
+    }
+    else if(msg.content === "Infernape sucks"){
+        msg.reply('cap');
+    }
+    else if(msg.content === "Infernape is garbage"){
+        msg.reply('cap');
     }
     else if(msg.content === "chacho"){
         msg.reply('based');
+    }
+})
+
+bot.on('message', msg =>{
+    if(msg.content === "Piplup"){
+        msg.reply('Shall I initiate PK Donuts 1000 protocol?');
+    }
+    else if(msg.content === "piplup"){
+        msg.reply('WHERE?');
+    }
+    else if(msg.content === "Piplup good"){
+        msg.reply('cap');
+    }
+    else if(msg.content === "piplup good"){
+        msg.reply('cap');
+    }
+    else if(msg.content === "Tauros"){
+        msg.reply('NO.');
+    }
+    else if(msg.content === "tauros"){
+        msg.reply('...');
+    }
+    else if(msg.content === "Earthquake"){
+        msg.reply('NO.');
+    }
+    else if(msg.content === "earthquake"){
+        msg.reply('no.');
+    }
+    else if(msg.content === "Foe Tauros used Earthquake!"){
+        msg.reply('you deserve ban but that is below my paygrade');
     }
 })
 
@@ -155,7 +206,7 @@ bot.on('message', message =>{
 
     switch(args[0]){
         case 'pkpog':
-            message.react('<:pokePOGGERS:834265725253976076>').then(message.channel.send('PokePOGGERS!'));
+            message.channel.send('PokePOGGERS!');
         break;
     }
 })
@@ -168,6 +219,12 @@ bot.on('message', message =>{
     switch(args[0]){
         case 'charge':
             message.channel.send('Thanks for the recharge! ~BZZT~')
+            break;
+        case 'pkpog':
+            message.channel.send('PokePOGGERS!');
+            break;
+        case 'randpoke':
+            message.channel.send('Coming soon...');
             break;
         case 'robotalk':
             if(!args[1]){
